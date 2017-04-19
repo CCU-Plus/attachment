@@ -66,8 +66,8 @@ class Attachment extends Model
             ->readStream($this->getAttribute('path'));
 
         return response()->stream(function () use ($stream) {
-            while (ob_end_flush()) {
-                ;
+            if (ob_get_length()) {
+                ob_clean();
             }
 
             fpassthru($stream);
