@@ -1,0 +1,40 @@
+{
+  "name": "ccu-plus/attachment",
+  "description": "CCU Plus attachment.",
+  "version": "0.0.1",
+  "type": "library",
+  "homepage": "https://github.com/CCU-Plus/attachment",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BePsvPT",
+      "email": "freedom@csie.io"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "illuminate/database": "5.4.*",
+    "illuminate/support": "5.4.*"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "^0.3",
+    "orchestra/database": "3.4.x-dev",
+    "orchestra/testbench": "3.4.*",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "CCUPlus\\Attachment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests"
+    ]
+  },
+  "config": {
+    "notify-on-install": false,
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
