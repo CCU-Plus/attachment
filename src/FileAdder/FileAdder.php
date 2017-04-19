@@ -95,13 +95,13 @@ class FileAdder
             return $this->filename;
         }
 
-        $extension = $this->file->getExtension();
+        $filename = $this->file->getClientOriginalName();
 
-        if (strlen($extension)) {
-            $suffix = '.'.$extension;
+        $extension = $this->file->getClientOriginalExtension();
+
+        if ($len = strlen($extension)) {
+            $filename = substr($filename, 0, -($len + 1));
         }
-
-        $filename = $this->file->getBasename($suffix ?? null);
 
         return $this->setFilename($filename)->getFilename();
     }
