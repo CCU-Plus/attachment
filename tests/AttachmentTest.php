@@ -1,6 +1,5 @@
 <?php
 
-use CCUPlus\Attachment\Attachment;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -65,18 +64,26 @@ class AttachmentTest extends Orchestra\Testbench\TestCase
 
     public function test_attachments()
     {
-        $this->app['router']->get('/', function () {
-            return Attachment::first()->download();
-        });
-
         Storage::fake('attachments');
 
-        $this->user->addFile(UploadedFile::fake()->image('maple.jpg'))->save();
+        $attachment = $this->user->addFile(UploadedFile::fake()->image('maple.jpg'))->save();
 
-        $this->assertCount(1, Attachment::all());
+        $this->assertTrue($attachment->exists);
 
-        $this->get('/')->assertStatus(200);
+        $content = '';
 
-        $this->assertSame(1, Attachment::first()->getAttribute('downloads'));
+        ob_start(function ($buffer) use (&$content) {
+            return $content = $buffer;
+        });
+
+        echo 'buffering';
+
+        $attachment->download()->sendContent();
+
+        ob_end_clean();
+
+        $this->assertSame($attachment->getAttribute('size'), strlen($content));
+
+        $this->assertSame(1, $attachment->getAttribute('downloads'));
     }
 }
