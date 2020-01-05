@@ -1,40 +1,43 @@
 {
   "name": "ccu-plus/attachment",
-  "description": "CCU Plus attachment.",
+  "description": "Provide interface for core module to upload and scan attachments.",
+  "keywords": ["ccu-plus"],
   "version": "0.0.1",
+  "license": "AGPL-3.0-only",
   "type": "library",
-  "homepage": "https://github.com/CCU-Plus/attachment",
-  "license": "MIT",
   "authors": [
     {
-      "name": "BePsvPT",
-      "email": "freedom@csie.io"
+      "name": "bepsvpt",
+      "email": "og7lsrszah6y3lz@infinitefa.email"
     }
   ],
   "require": {
-    "php": "^7.0",
-    "illuminate/database": "5.4.*",
-    "illuminate/support": "5.4.*"
+    "php": "^7.2",
+    "guzzlehttp/guzzle": "^6.5",
+    "illuminate/database": "^6.2",
+    "illuminate/support": "^6.2"
   },
   "require-dev": {
-    "codeclimate/php-test-reporter": "^0.3",
-    "orchestra/database": "3.4.x-dev",
-    "orchestra/testbench": "3.4.*",
-    "phpunit/phpunit": "^5.7"
+    "orchestra/testbench": "^4.0",
+    "phpunit/phpunit": "^8.4"
   },
   "autoload": {
     "psr-4": {
-      "CCUPlus\\Attachment\\": "src/"
+      "CCUPLUS\\Attachment\\": "src/"
     }
   },
   "autoload-dev": {
+    "psr-4": {
+      "CCUPLUS\\Attachment\\Tests\\": "tests/"
+    },
     "classmap": [
       "tests"
     ]
   },
   "config": {
-    "notify-on-install": false,
     "optimize-autoloader": true,
     "sort-packages": true
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
