@@ -1,4 +1,3 @@
-# CCU Plus Attachment
+# CCU PLUS Attachment
 
-[![Build Status](https://travis-ci.org/CCU-Plus/attachment.svg?branch=master)](https://travis-ci.org/CCU-Plus/attachment)
-[![StyleCI](https://styleci.io/repos/88722189/shield)](https://styleci.io/repos/88722189)
+[![Actions Status](https://github.com/ccu-plus/attachment/workflows/Unit%20Test/badge.svg)](https://github.com/ccu-plus/attachment/actions)
