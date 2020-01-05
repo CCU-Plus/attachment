@@ -1,6 +1,6 @@
 <?php
 
-namespace CCUPlus\Attachment;
+namespace CCUPLUS\Attachment;
 
 use Illuminate\Support\ServiceProvider;
 

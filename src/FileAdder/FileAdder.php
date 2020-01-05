@@ -1,6 +1,6 @@
 <?php
 
-namespace CCUPlus\Attachment\FileAdder;
+namespace CCUPLUS\Attachment\FileAdder;
 
 use CCUPlus\Attachment\Attachment;
 use Illuminate\Database\Eloquent\Model;

@@ -1,6 +1,6 @@
 <?php
 
-namespace CCUPlus\Attachment\Traits;
+namespace CCUPLUS\Attachment\Traits;
 
 use CCUPlus\Attachment\Attachment;
 use CCUPlus\Attachment\FileAdder\FileAdder;
