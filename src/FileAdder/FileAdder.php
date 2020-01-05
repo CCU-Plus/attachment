@@ -2,10 +2,10 @@
 
 namespace CCUPLUS\Attachment\FileAdder;
 
-use CCUPlus\Attachment\Attachment;
+use CCUPLUS\Attachment\Attachment;
 use Illuminate\Database\Eloquent\Model;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FileAdder
 {

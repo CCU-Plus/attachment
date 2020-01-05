@@ -2,8 +2,8 @@
 
 namespace CCUPLUS\Attachment\Traits;
 
-use CCUPlus\Attachment\Attachment;
-use CCUPlus\Attachment\FileAdder\FileAdder;
+use CCUPLUS\Attachment\Attachment;
+use CCUPLUS\Attachment\FileAdder\FileAdder;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 trait HasAttachmentTrait

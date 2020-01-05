@@ -2,7 +2,7 @@
 
 namespace CCUPLUS\Attachment\Tests\Models;
 
-use CCUPlus\Attachment\Traits\HasAttachmentTrait;
+use CCUPLUS\Attachment\Traits\HasAttachmentTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
