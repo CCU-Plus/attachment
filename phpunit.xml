@@ -2,29 +2,28 @@
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
          bootstrap="vendor/autoload.php"
+         cacheResult="false"
+         cacheTokens="false"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnError="false"
-         stopOnFailure="false"
-         syntaxCheck="true"
->
-    <testsuites>
-        <testsuite name="CCU Plus Attachment">
-            <directory>./tests</directory>
-        </testsuite>
-    </testsuites>
-    <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-    </logging>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
-        </whitelist>
-    </filter>
-    <php>
-        <env name="APP_KEY" value="XgSPf5i6XVhiISBdy4f8HIcu5fJGMdPH"/>
-    </php>
+         processIsolation="true"
+         stopOnFailure="false">
+  <testsuites>
+    <testsuite name="CCU PLUS Attachment">
+      <directory suffix="Test.php">./tests</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="DB_CONNECTION" value="testing"/>
+  </php>
+  <logging>
+    <log type="coverage-clover" target="clover.xml"/>
+  </logging>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./src</directory>
+    </whitelist>
+  </filter>
 </phpunit>
