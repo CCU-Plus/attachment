@@ -1,10 +1,15 @@
 <?php
 
+namespace CCUPLUS\Attachment\Tests;
+
+use CCUPLUS\Attachment\AttachmentServiceProvider;
+use CCUPLUS\Attachment\Tests\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Orchestra\Testbench\TestCase;
 
-class AttachmentTest extends Orchestra\Testbench\TestCase
+class AttachmentTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -39,7 +44,7 @@ class AttachmentTest extends Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            CCUPlus\Attachment\AttachmentServiceProvider::class,
+            AttachmentServiceProvider::class,
         ];
     }
 

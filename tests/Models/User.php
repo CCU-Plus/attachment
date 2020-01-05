@@ -1,5 +1,7 @@
 <?php
 
+namespace CCUPLUS\Attachment\Tests\Models;
+
 use CCUPlus\Attachment\Traits\HasAttachmentTrait;
 use Illuminate\Database\Eloquent\Model;
 
